@@ -1,0 +1,29 @@
+header {
+    background-image: linear-gradient(to right,#e66465, #9198e5);
+}
+.editor-container {
+    overflow: auto;
+    overflow-x: break-word;
+    border: 1px solid #ccc;
+}
+/* Make sure the parent row fills the height */
+.main-container {
+    display: flex;
+    flex-direction: column;
+    height: 75vh; /* Full viewport height */
+}
+/* Make the row with editors fill the remaining space */
+.row {
+    flex: 1;
+    min-height: 0; /* Prevent overflow issues */
+}
+/* Make each editor container fill its parent height */
+.editor-container {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+}
+/* Custom styles for modal inputs for a minimal look */
+.modal-label {
+    font-weight: bold;
+}
