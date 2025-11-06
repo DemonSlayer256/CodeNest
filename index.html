@@ -72,7 +72,7 @@
         </svg>
       </button>
       <button id="runBtn" class="btn btn-primary btn-sm" title="Run"><i class="fas fa-play"></i></button>
-      <button id="resetBtn" class="btn btn-secondary btn-sm" title="Reset"><i class="fas fa-sync-alt"></i></button>
+      <button id="resetBtn" class="btn btn-secondary btn-sm" title="Reset"><i class="fas fa-eraser"></i></button>
       <button id="shareBtn" class="btn btn-info btn-sm" title="Share"><i class="fas fa-share-alt"></i></button>
       <button class="btn btn-success btn-sm" id="openpreview" title="Open Preview"><i class="fas fa-external-link-alt"></i></button>
       <button id="modeToggle" class="btn btn-outline-light btn-sm" title="Toggle Dark Mode"><i class="fas fa-moon"></i></button>
@@ -108,7 +108,7 @@
   </div>
 </main>
   <section class="pb-2 mt-0">
-    <div class="d-flex justify-content-around border px-3 rounded border-primary" style="height: 50vh;">
+    <div class="d-flex justify-content-around border rounded border-primary" style="height: 50vh;">
       <iframe id="preview" style="width:100%; height:100%; border:none;"></iframe>
     </div>
   </section>
@@ -164,17 +164,7 @@
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.23.3/src-min/ace.js"></script>
 
 
-<script>
-  // Show the modal
-  document.getElementById('settingsBtn').addEventListener('click', function() {
-    document.getElementById('settingsModal').classList.add('open');
-  });
 
-  // Close the modal
-  document.getElementById('closeSettingsModal').addEventListener('click', function() {
-    document.getElementById('settingsModal').classList.remove('open');
-  });
-</script>
 
 </body>
 </html>

@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     htmlEditor.setTheme("ace/theme/dracula");
     htmlEditor.session.setMode("ace/mode/xml");
     htmlEditor.setOptions({ autoScrollEditorIntoView: true, wrap: true });
-    htmlEditor.setValue("<!-- Write your HTML here -->");
+    htmlEditor.setValue("<p>Hello World</p>");
     htmlEditor.setOption("fontSize", 14);
     htmlEditor.renderer.setShowGutter(false);
 
@@ -11,7 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
     cssEditor.setTheme("ace/theme/dracula");
     cssEditor.session.setMode("ace/mode/css");
     cssEditor.setOptions({ autoScrollEditorIntoView: true, wrap: true });
-    cssEditor.setValue("/* Write your CSS here */");
+    cssEditor.setValue(`p{
+    font-weight: bold;
+    font-size: 35px;
+    text-align: center;\n}`);
     cssEditor.setOption("fontSize", 14);
     cssEditor.renderer.setShowGutter(false);
 
@@ -44,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     [htmlEditor, cssEditor, jsEditor].forEach(editor => {
         editor.session.on('change', () => {
             clearTimeout(timeout);
-            timeout = setTimeout(updatePreview, 500); // auto-update after 0.5s pause
+            timeout = setTimeout(updatePreview, 1000); // auto-update after 0.5s pause
         });
     });
 
@@ -141,9 +144,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     // Store initial code for reset
     const initialCode = {
-        html: htmlEditor.getValue(),
-        css: cssEditor.getValue(),
-        js: jsEditor.getValue(),
+        html: "<!--Write-your-HTML-code-here>",
+        css: "/* Write your CSS here */",
+        js: "//Write your JavaScript here ",
     };
 
     // Update preview
