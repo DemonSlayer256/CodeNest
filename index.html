@@ -44,14 +44,6 @@
     .modal-header h5 {
       margin: 0;
     }
-
-    .btn-close {
-      background: none;
-      border: none;
-      font-size: 1.5rem;
-      color: #000;
-    }
-
     .modal.open {
       display: flex;
     }
@@ -71,7 +63,6 @@
           <rect x="16" y="4" width="6" height="16" rx="1"/>
         </svg>
       </button>
-      <button id="runBtn" class="btn btn-primary btn-sm" title="Run"><i class="fas fa-play"></i></button>
       <button id="resetBtn" class="btn btn-secondary btn-sm" title="Reset"><i class="fas fa-eraser"></i></button>
       <button id="shareBtn" class="btn btn-info btn-sm" title="Share"><i class="fas fa-share-alt"></i></button>
       <button class="btn btn-success btn-sm" id="openpreview" title="Open Preview"><i class="fas fa-external-link-alt"></i></button>
@@ -120,7 +111,7 @@
     <div class="modal-content" style="min-width: 300px;">
       <div class="modal-header">
         <h5 class="modal-title" id="settingsModalLabel"><i class="fas fa-cog"></i> Settings</h5>
-        <button type="button" class="btn-close" id="closeSettingsModal"></button>
+        <button type="button" class="btn-close" aria-label="Close" id="closeSettingsModal"></button>
       </div>
       <div class="modal-body">
         <form id="settingsForm" class="g-3">
@@ -162,9 +153,6 @@
 <!-- Scripts -->
 <script src="static/script.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/ace-builds@1.23.3/src-min/ace.js"></script>
-
-
-
 
 </body>
 </html>
