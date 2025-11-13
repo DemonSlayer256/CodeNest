@@ -47,7 +47,7 @@ document.addEventListener('DOMContentLoaded', function () {
     [htmlEditor, cssEditor, jsEditor].forEach(editor => {
         editor.session.on('change', () => {
             clearTimeout(timeout);
-            timeout = setTimeout(updatePreview, 1000); // auto-update after 0.5s pause
+            timeout = setTimeout(updatePreview, 500); // auto-update after 0.5s pause
         });
     });
 
@@ -176,7 +176,6 @@ document.addEventListener('DOMContentLoaded', function () {
     updatePreview();
 
     // Button events
-    document.getElementById('runBtn').addEventListener('click', updatePreview);
     document.getElementById('resetBtn').addEventListener('click', () => {
         htmlEditor.setValue(initialCode.html);
         cssEditor.setValue(initialCode.css);
@@ -263,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     // Close settings modal
-    document.getElementById('closeSettingsModal').addEventListener('click', () => {
+    document.querySelectorAll('#closeSettingsModal').forEach( (e) => e.addEventListener('click', () => {
         settingsModal.classList.remove('open'); // Close modal
-    });
+    }))
 });
